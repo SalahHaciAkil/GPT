@@ -1,7 +1,7 @@
 import openai
 import os
 
-with open('openai_key.txt') as f:
+with open('openai_key.txt', 'r') as f:
     api_key = f.read().strip('\n')
     assert api_key.startswith('sk-'), "Please enter a valid OpenAI API key"
 
