@@ -15,7 +15,6 @@ Features:
 - 😃 Analyze user feelings based on provided emotions and user messages/comments.
 - 📋 Accepts two arguments: feelings and user message.
 - 🎯 Output the most relevant feeling based on the input.
-- 🧠 Utilizes advanced algorithms for sentiment analysis.
 - 🌐 Supports multiple languages.
 
 
