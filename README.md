@@ -15,3 +15,18 @@
    :bar_chart: Utilize data analysis techniques to determine the user's feeling.
    :thought_balloon: Output the user's feeling based on the provided data.
    :sparkles: Provide accurate and reliable results for feelings analysis.
+
+
+
+
+⚠️ **IMPORTANT: API Key Setup**
+
+Before running the application, please follow the steps below:
+
+1. Create a file called `openai_key.txt` in the project directory.
+2. Paste your OpenAI API key in the `openai_key.txt` file.
+3. Save the file.
+
+Make sure to keep your API key secure and avoid sharing it publicly. This step is necessary to authenticate and access the OpenAI APIs used by the application.
+
+**Note:** Add `openai_key.txt` to your `.gitignore` file to prevent accidentally committing and pushing your API key to version control.
