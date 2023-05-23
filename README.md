@@ -21,8 +21,6 @@ This is a Python-based application that utilizes OpenAI APIs to generate random 
 # 😊 User Feeling Analyzer
 ## ✨ Features
 
-- **Sentiment Analysis**: The app uses machine learning models and sentiment analysis algorithms to determine the sentiment expressed in the user's text input.
-
 - **Emotion Detection**: By analyzing the text, the app can detect and classify different emotions such as happiness, sadness, anger, fear, and more.
 
 - **Accuracy and Confidence**: The app provides a measure of accuracy and confidence level for the predicted sentiment and emotion results.
