@@ -1,4 +1,4 @@
-# 🍽 Openai Project
+# 🍽 Openai Projects
 
 
 
