@@ -14,17 +14,13 @@ This is a Python-based application that utilizes OpenAI APIs to generate random 
 
 - **Local Image Storage**: The app saves the generated images locally, allowing users to view them even when offline.
 
-## 📋 Requirements
 
-To run the Meal Generator App, you need the following:
+ # 😊 User Feeling Analyzer
 
-- Python (version 3.6 or higher)
-- OpenAI API credentials
-- Internet connection
+## ✨ Features
 
-## 🚀 Installation
+- **Sentiment Analysis**: The app uses machine learning models and sentiment analysis algorithms to determine the sentiment expressed in the user's text input.
 
-1. Clone the repository:
+- **Emotion Detection**: By analyzing the text, the app can detect and classify different emotions such as happiness, sadness, anger, fear, and more.
 
-   ```bash
-   git clone https://github.com/your-username/meal-generator-app.git
+- **Accuracy and Confidence**: The app provides a measure of accuracy and confidence level for the predicted sentiment and emotion results.
