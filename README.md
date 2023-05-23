@@ -15,8 +15,10 @@ This is a Python-based application that utilizes OpenAI APIs to generate random 
 - **Local Image Storage**: The app saves the generated images locally, allowing users to view them even when offline.
 
 
- # 😊 User Feeling Analyzer
 
+
+
+# 😊 User Feeling Analyzer
 ## ✨ Features
 
 - **Sentiment Analysis**: The app uses machine learning models and sentiment analysis algorithms to determine the sentiment expressed in the user's text input.
