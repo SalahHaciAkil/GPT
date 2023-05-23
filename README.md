@@ -1,4 +1,8 @@
-# 🍽 Meal Generator App
+# 🍽 Openai Project
+
+
+
+1 # 🍽 Meal Generator App
 
 This is a Python-based application that utilizes OpenAI APIs to generate random meal ideas. The app not only generates meal suggestions but also retrieves corresponding images for each meal and saves them locally.
 
