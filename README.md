@@ -28,5 +28,3 @@ Before running the application, please follow the steps below:
 3. Save the file.
 
 Make sure to keep your API key secure and avoid sharing it publicly. This step is necessary to authenticate and access the OpenAI APIs used by the application.
-
-**Note:** Add `openai_key.txt` to your `.gitignore` file to prevent accidentally committing and pushing your API key to version control.
