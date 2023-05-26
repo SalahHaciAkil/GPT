@@ -3,7 +3,6 @@
 
 
 1. Meal App Generator
-Features:
 - 🍽️ Generate random meal ideas based on ingredients and preferences.
 - 📸 Automatically generate high-quality images of the meals.
 - 💾 Save the generated meals and images for future reference.
@@ -11,11 +10,16 @@ Features:
 - 🧠 Utilizes OpenAI APIs for advanced meal generation.
 
 2. User Feeling Analyzer
- Features:
 - 😃 Analyze user feelings based on provided emotions and user messages/comments.
 - 📋 Accepts two arguments: feelings and user message.
 - 🎯 Output the most relevant feeling based on the input.
 - 🌐 Supports multiple languages.
+
+3. YouTube Video Summarizer
+- 📹 Summarize YouTube videos based on the provided video URL.
+- 📋 Accepts one argument: YouTube video URL.
+- 🎯 Output the summarized video transcript.
+- 🌐 Supports multiple languages(WIP)
 
 
 
