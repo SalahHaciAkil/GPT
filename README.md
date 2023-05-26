@@ -19,7 +19,7 @@
 - 📹 Summarize YouTube videos based on the provided video URL.
 - 📋 Accepts one argument: YouTube video URL.
 - 🎯 Output the summarized video transcript.
-- 🌐 Supports multiple languages(WIP)
+- 🌐 Supports multiple languages
 
 
 

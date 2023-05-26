@@ -34,21 +34,28 @@ def youtube_audio_downloader(link):
     os.rename(download_result, complete_audio_path)
     return complete_audio_path
 
-def transcribe(audio_file):
+def transcribe(audio_file, not_english=False):
     if not os.path.exists(audio_file):
         print(f'The following file doensn not exist: {audio_file}')
         return False
-    with open(audio_file, 'rb') as f:
-        print("Starting transcribing ...", end='')
-        transcript = openai.Audio.transcribe('whisper-1', f)
 
-        print('Done!')
+
+    if not_english:
+        with open(audio_file, 'rb') as f:
+            print("Translating non-English audio to English ...", end='')
+            transcript = openai.Audio.translate('whisper-1', f)
+            print('Done!')
+
+    else:
+        with open(audio_file, 'rb') as f:
+            print("Starting transcribing ...", end='')
+            transcript = openai.Audio.transcribe('whisper-1', f)
+            print('Done!')
         
-        
-        name, extension = os.path.splitext(audio_file)
-        transcript_filename = f'transcript-{name}.text'
-        with open(transcript_filename, 'w') as f:
-            f.write(transcript['text'])
+    name, extension = os.path.splitext(audio_file)
+    transcript_filename = f'transcript-{name}.text'
+    with open(transcript_filename, 'w') as f:
+        f.write(transcript['text'])
     
     return transcript_filename
 
@@ -90,9 +97,9 @@ def summarize(transcript_filename):
     return r
 
 
-link = 'YouTube link'
+link = 'YouTube Link'
 downloaded_audio_file = youtube_audio_downloader(link)
-transcribed_file = transcribe(downloaded_audio_file)
+transcribed_file = transcribe(downloaded_audio_file, not_english=False)
 summary = summarize(transcribed_file)
 print('\n')
 print(summary)
