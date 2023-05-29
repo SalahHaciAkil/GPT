@@ -48,12 +48,12 @@ def transcribe(audio_file, not_english=False):
 
     else:
         with open(audio_file, 'rb') as f:
-            print("Starting transcribing ...", end='')
+            print("Transcribing Started ...", end='')
             transcript = openai.Audio.transcribe('whisper-1', f)
             print('Done!')
         
     name, extension = os.path.splitext(audio_file)
-    transcript_filename = f'transcript-{name}.text'
+    transcript_filename = f'transcript-{name}.txt'
     with open(transcript_filename, 'w') as f:
         f.write(transcript['text'])
     
@@ -79,7 +79,7 @@ def summarize(transcript_filename):
     
     
     
-    print("Start summarizing....", end=" ")
+    print("Summarizing Started....", end=" ")
     
     response = openai.ChatCompletion.create(
         model='gpt-3.5-turbo',
@@ -97,7 +97,7 @@ def summarize(transcript_filename):
     return r
 
 
-link = 'YouTube Link'
+link = input("Enter a YouTube link: ")
 downloaded_audio_file = youtube_audio_downloader(link)
 transcribed_file = transcribe(downloaded_audio_file, not_english=False)
 summary = summarize(transcribed_file)

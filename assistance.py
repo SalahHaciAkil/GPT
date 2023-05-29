@@ -43,6 +43,44 @@ def create_todo_list(list_name, tasks):
     with open('todos.json', 'w') as file:
         json.dump(todos, file)
 
+def remove_todo_list(list_name):
+    if not os.path.exists('todos.json'):
+        speak("No to-do lists found.")
+        return
+
+    with open('todos.json', 'r') as file:
+        todos = json.load(file)
+
+    if list_name in todos:
+        del todos[list_name]
+        with open('todos.json', 'w') as file:
+            json.dump(todos, file)
+        speak(f"To-do list {list_name} removed successfully.")
+    else:
+        speak(f"No to-do list found with the name {list_name}.")
+
+
+def remove_todo(to_do, to_do_list):
+    if not os.path.exists('todos.json'):
+        speak("No to-do lists found.")
+        return
+
+    with open('todos.json', 'r') as file:
+        todos = json.load(file)
+
+    if to_do_list in todos:
+        tasks = todos[to_do_list]
+        if to_do in tasks:
+            tasks.remove(to_do)
+            with open('todos.json', 'w') as file:
+                json.dump(todos, file)
+            speak(f"To-do {to_do} removed successfully.")
+        else:
+            speak(f"No to-do found with the name {to_do}.")
+    else:
+        speak(f"No to-do list found with the name {to_do_list}.")
+
+
 def search_web(query):
     for j in search(query, num_results=5):
         print(j)
@@ -115,6 +153,18 @@ if __name__ == "__main__":
             speak("Which to-do list do you want to view?")
             list_name = listen_command()
             view_todo_list(list_name)
+
+        elif 'remove to do list' in query:
+            speak("Which to-do list do you want to remove?")
+            list_name = listen_command()
+            remove_todo_list(list_name)
+
+        elif 'remove to do' in query:
+            speak("Which to-do do you want to remove?")
+            to_do = listen_command()
+            speak("From which to-do list?")
+            to_do_list = listen_command()
+            remove_todo(to_do, to_do_list)
 
         elif 'exit' in query:
             speak("Goodbye!")
